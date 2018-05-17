@@ -14,7 +14,7 @@ export default class App extends React.Component {
     this.setState((prevState) => {
       if (prevState.mili < 1000) {
         return {mili: prevState.mili + 100};
-      } else if (prevState.mili >= 1000) {
+      } else if (prevState.mili > 999) {
         return {mili: prevState.mili - 1000, second: prevState.second + 1};
       }
     });
